@@ -62,8 +62,8 @@ body
                 button.d-flex.w-25.justify-content-center.align-items-center.border dnevnik
             #text-block.d-none.w-75.justify-content-center.position-relative.vh-90
                 p.w-100.m-1
-                    | &Pcy;&iecy;&rcy;&vcy;&ycy;&jcy; &tcy;&iecy;&kcy;&scy;&tcy;&ocy;&vcy;&ycy;&jcy; &bcy;&lcy;&ocy;&kcy;: &Ocy;&scy;&ncy;&ocy;&vcy;&ycy; &kcy;&ocy;&gcy;&ncy;&icy;&tcy;&icy;&vcy;&ncy;&ocy;&jcy; &pcy;&scy;&icy;&khcy;&ocy;&tcy;&iecy;&rcy;&acy;&pcy;&icy;&icy;.
-                    | &Kcy;&Pcy;&Tcy; - &ecy;&tcy;&ocy; &lcy;&ucy;&chcy;&shcy;&icy;&jcy; &mcy;&iecy;&tcy;&ocy;&dcy; &vcy;&scy;&iecy;&khcy; &vcy;&rcy;&iecy;&mcy;&iecy;&ncy; &icy; &ncy;&acy;&rcy;&ocy;&dcy;&ocy;&vcy; &bcy;&lcy;&acy; &bcy;&lcy;&acy; *&tcy;&iecy;&kcy;&scy;&tcy;*. &Vcy;&ocy;&tcy; &iecy;&scy;&tcy;&softcy; &mcy;&ocy;&dcy;&iecy;&lcy;&softcy;, &scy;&mcy;&ocy;&tcy;&rcy;&icy;&tcy;&iecy;:
+                    | Первый текстовый блок: Основы когнитивной психотерапии.
+                    | КПТ - это лучший метод всех времен и народов бла бла *текст*. Вот есть модель, смотрите:
                 button.d-none.w-25.justify-content-center.align-items-center.border.position-absolute.bottom-0.exit exit
             #table-block.d-none.w-75.justify-content-center.position-relative.vh-90
                 p.w-100.m-1 table
@@ -73,18 +73,18 @@ body
                     table.table.w-100
                         thead
                             tr.d-flex.border.border-black.border-1.w-100
-                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 &Dcy;&acy;&tcy;&acy;
-                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 &Scy;&icy;&tcy;&ucy;&acy;&tscy;&icy;&yacy;
-                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 &Mcy;&ycy;&scy;&lcy;&softcy;
-                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 &Ecy;&mcy;&ocy;&tscy;&icy;&yacy;
-                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 &Scy;&icy;&lcy;&acy;
+                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 Дата
+                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 Ситуация
+                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 Мысль
+                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 Эмоция
+                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 Сила
                     button.d-none.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#dnevnikModal') add
                 button.d-none.w-25.justify-content-center.align-items-center.border.position-absolute.bottom-0.exit exit
         #dnevnikModal.modal.fade.w-100.m-0(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
             .modal-dialog.modal-dialog-centered.w-75.mw-100
                 .modal-content
                     .modal-header
-                        h5#exampleModalLabel.modal-title &Ocy;&pcy;&icy;&shcy;&icy;&tcy;&iecy; &scy;&ocy;&bcy;&ycy;&tcy;&icy;&iecy;
+                        h5#exampleModalLabel.modal-title Опишите событие
                         button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
                     .modal-body
                         form#newMind.d-flex.w-100.justify-content-evenly.align-items-center
@@ -98,11 +98,11 @@ body
                             datalist#suggestions
                             input#myRange.slider(type='range' min='0' max='100' value='50')
                             p
-                                | &Zcy;&ncy;&acy;&chcy;&iecy;&ncy;&icy;&iecy;:
+                                | Значение:
                                 span#demo
                     .modal-footer
-                        button.btn.btn-secondary(type='button' data-bs-dismiss='modal') &Zcy;&acy;&kcy;&rcy;&ycy;&tcy;&softcy;
-                        button.btn.btn-primary(type='button' data-bs-dismiss='modal') &Scy;&ocy;&khcy;&rcy;&acy;&ncy;&icy;&tcy;&softcy; &icy;&zcy;&mcy;&iecy;&ncy;&iecy;&ncy;&icy;&yacy;
+                        button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Закрыть
+                        button.btn.btn-primary(type='button' data-bs-dismiss='modal') Сохранить изменения
         template#tableBlock
 
         // main script
