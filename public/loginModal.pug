@@ -1,0 +1,19 @@
+#loginModal.modal.fade(tabindex='-1'
+    aria-labelledby='loginModalLabel'
+    aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h5#loginModalLabel.modal-title Login
+                button.btn-close(type='button'
+                    data-bs-dismiss='modal'
+                    aria-label='Close')
+            .modal-body
+                form#loginForm
+                    .mb-3
+                        label.form-label(for='loginUsername') Username:
+                        input#loginUsername.form-control(type='text' name='loginUsername')
+                    .mb-3
+                        label.form-label(for='loginPassword') Password:
+                        input#loginPassword.form-control(type='password' name='loginPassword')
+                    button.btn.btn-primary(type='submit') Login

@@ -4,136 +4,103 @@ head
     title Title
     meta(name='viewport' content='width=device-width, initial-scale=1')
     // css
-    //link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-    //    rel="stylesheet"
-    //    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-    //    crossorigin="anonymous")
-    //script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    //    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    //    crossorigin="anonymous")
-    //link(rel='stylesheet' href='./css/bootstrap.css')
-    //script(src='./js/bootstrap.bundle.js')
-    link(rel='stylesheet' href='node_modules/bootstrap/dist/css/bootstrap.css')
-    script(src='node_modules/bootstrap/dist/js/bootstrap.bundle.js')
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous")
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous")
+    //link(rel='stylesheet' href='./css/bootstrap.css') // old
+    //script(src='./js/bootstrap.bundle.js') // old
+    //link(type="text/css" rel='stylesheet' href='node_modules/bootstrap/dist/css/bootstrap.css')
+    //script(type="text/javascript" src='node_modules/bootstrap/dist/js/bootstrap.bundle.js')
 
     // angular
-    //script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js")
-    script(src="node_modules/angular/angular.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js")
+    //script(type="text/javascript" src="node_modules/angular/angular.min.js")
 
     // jquery
-    //script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js')
-    script(src='node_modules/jquery/dist/jquery.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js')
+    //script(type="text/javascript" src='node_modules/jquery/dist/jquery.min.js')
 body
-    nav.navbar.navbar-expand-lg.navbar-light.bg-light
-        .container-fluid
-            button.navbar-toggler(type='button'
-                data-bs-toggle='collapse'
-                data-bs-target='#navbarNav'
-                aria-controls='navbarNav'
-                aria-expanded='false'
-                aria-label='Toggle navigation')
-                span.navbar-toggler-icon
-            #navbarNav.collapse.navbar-collapse
-                ul.navbar-nav
-                    li.nav-item
-                        a.nav-link(href='#'
-                            data-bs-toggle='modal'
-                            data-bs-target='#registerModal') Register
-                    li.nav-item
-                        a.nav-link(href='#'
-                            data-bs-toggle='modal'
-                            data-bs-target='#loginModal') Login
-    #registerModal.modal.fade(tabindex='-1'
-        aria-labelledby='registerModalLabel'
-        aria-hidden='true')
-        .modal-dialog
-            .modal-content
-                .modal-header
-                    h5#registerModalLabel.modal-title Register
-                    button.btn-close(type='button'
-                        data-bs-dismiss='modal'
-                        aria-label='Close')
-                .modal-body
-                    form#registerForm
-                        .mb-3
-                            label.form-label(for='regUsername') Username:
-                            input#regUsername.form-control(type='text' name='regUsername')
-                        .mb-3
-                            label.form-label(for='regPassword') Password:
-                            input#regPassword.form-control(type='password' name='regPassword')
-                        button.btn.btn-primary(type='submit') Register
-    #loginModal.modal.fade(tabindex='-1'
-        aria-labelledby='loginModalLabel'
-        aria-hidden='true')
-        .modal-dialog
-            .modal-content
-                .modal-header
-                    h5#loginModalLabel.modal-title Login
-                    button.btn-close(type='button'
-                        data-bs-dismiss='modal'
-                        aria-label='Close')
-                .modal-body
-                    form#loginForm
-                        .mb-3
-                            label.form-label(for='loginUsername') Username:
-                            input#loginUsername.form-control(type='text' name='loginUsername')
-                        .mb-3
-                            label.form-label(for='loginPassword') Password:
-                            input#loginPassword.form-control(type='password' name='loginPassword')
-                        button.btn.btn-primary(type='submit') Login
-    section#cards-container.d-flex.justify-content-center.align-items-center.flex-wrap.w-75.m-auto.vh-100
-        a.card.p-2.w-50.m-2.link-body-emphasis.text-decoration-none.cursor-pointer.d-flex.align-items-center kpt
-        a.card.p-2.w-50.m-2.link-body-emphasis.text-decoration-none.cursor-pointer.d-flex.align-items-center 2
-        a.card.p-2.w-50.m-2.link-body-emphasis.text-decoration-none.cursor-pointer.d-flex.align-items-center 3
-        a.card.p-2.w-50.m-2.link-body-emphasis.text-decoration-none.cursor-pointer.d-flex.align-items-center 4
-    section#menu.d-none.m-auto.w-75.justify-content-evenly.flex-column.align-items-center.opacity-0.vh-100.position-relative
-        button.back.position-absolute.top-0 back
-        .d-flex.w-100.justify-content-evenly.align-items-center
-            button.d-flex.w-25.justify-content-center.align-items-center.border text
-            button.d-flex.w-25.justify-content-center.align-items-center.border table
-            button.d-flex.w-25.justify-content-center.align-items-center.border dnevnik
-        #text-block.d-none.w-75.justify-content-center.position-relative.vh-90
-            p.w-100.m-1
-                | &Pcy;&iecy;&rcy;&vcy;&ycy;&jcy; &tcy;&iecy;&kcy;&scy;&tcy;&ocy;&vcy;&ycy;&jcy; &bcy;&lcy;&ocy;&kcy;: &Ocy;&scy;&ncy;&ocy;&vcy;&ycy; &kcy;&ocy;&gcy;&ncy;&icy;&tcy;&icy;&vcy;&ncy;&ocy;&jcy; &pcy;&scy;&icy;&khcy;&ocy;&tcy;&iecy;&rcy;&acy;&pcy;&icy;&icy;.
-                | &Kcy;&Pcy;&Tcy; - &ecy;&tcy;&ocy; &lcy;&ucy;&chcy;&shcy;&icy;&jcy; &mcy;&iecy;&tcy;&ocy;&dcy; &vcy;&scy;&iecy;&khcy; &vcy;&rcy;&iecy;&mcy;&iecy;&ncy; &icy; &ncy;&acy;&rcy;&ocy;&dcy;&ocy;&vcy; &bcy;&lcy;&acy; &bcy;&lcy;&acy; *&tcy;&iecy;&kcy;&scy;&tcy;*. &Vcy;&ocy;&tcy; &iecy;&scy;&tcy;&softcy; &mcy;&ocy;&dcy;&iecy;&lcy;&softcy;, &scy;&mcy;&ocy;&tcy;&rcy;&icy;&tcy;&iecy;:
-            button.d-none.w-25.justify-content-center.align-items-center.border.position-absolute.bottom-0.exit exit
-        #table-block.d-none.w-75.justify-content-center.position-relative.vh-90
-            p.w-100.m-1 table
-            button.d-none.w-25.justify-content-center.align-items-center.border.position-absolute.bottom-0.exit exit
-        #dnevnik-block.d-none.w-75.justify-content-center.position-relative.vh-90
-            #dnevnik.d-flex.justify-content-between.align-items-center.flex-column.mt-2.h-75.w-100.border.border-black
-                table.table.w-100
-                    thead
-                        tr.d-flex.border.border-black.border-1.w-100
-                            th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 &Dcy;&acy;&tcy;&acy;
-                            th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 &Scy;&icy;&tcy;&ucy;&acy;&tscy;&icy;&yacy;
-                            th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 &Mcy;&ycy;&scy;&lcy;&softcy;
-                            th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 &Ecy;&mcy;&ocy;&tscy;&icy;&yacy;
-                            th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 &Scy;&icy;&lcy;&acy;
-                button.d-none.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#dnevnikModal') add
-            button.d-none.w-25.justify-content-center.align-items-center.border.position-absolute.bottom-0.exit exit
-    #dnevnikModal.modal.fade.w-100.m-0(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
-        .modal-dialog.modal-dialog-centered.w-75.mw-100
-            .modal-content
-                .modal-header
-                    h5#exampleModalLabel.modal-title &Ocy;&pcy;&icy;&shcy;&icy;&tcy;&iecy; &scy;&ocy;&bcy;&ycy;&tcy;&icy;&iecy;
-                    button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
-                .modal-body
-                    form#newMind.d-flex.w-100.justify-content-evenly.align-items-center
-                        .d-flex.flex-column.justify-content-evenly.align-items-center
-                            input#date.mb-1(type='date' data-provide='datepicker')
-                            input#time(type='time' data-provide='datepicker')
-                        input(type='text'
-                            placeholder='Ситуация')
-                        input(type='text' placeholder='Мысль')
-                        input#emotionHelper(list='suggestions' name='suggestion' placeholder='Эмоция' autocomplete='off' pattern='^[a-zA-Z]+$')
-                        datalist#suggestions
-                        input#myRange.slider(type='range' min='0' max='100' value='50')
-                        p
-                            | &Zcy;&ncy;&acy;&chcy;&iecy;&ncy;&icy;&iecy;:
-                            span#demo
-                .modal-footer
-                    button.btn.btn-secondary(type='button' data-bs-dismiss='modal') &Zcy;&acy;&kcy;&rcy;&ycy;&tcy;&softcy;
-                    button.btn.btn-primary(type='button' data-bs-dismiss='modal') &Scy;&ocy;&khcy;&rcy;&acy;&ncy;&icy;&tcy;&softcy; &icy;&zcy;&mcy;&iecy;&ncy;&iecy;&ncy;&icy;&yacy;
-    template#tableBlock
-    script(src='index.js')
+    .d-flex.flex-column.vh-100
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            .container-fluid
+                button.navbar-toggler(type='button'
+                    data-bs-toggle='collapse'
+                    data-bs-target='#navbarNav'
+                    aria-controls='navbarNav'
+                    aria-expanded='false'
+                    aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarNav.collapse.navbar-collapse
+                    ul.navbar-nav
+                        li.nav-item
+                            a.nav-link(href='#'
+                                data-bs-toggle='modal'
+                                data-bs-target='#registerModal') Register
+                        li.nav-item
+                            a.nav-link(href='#'
+                                data-bs-toggle='modal'
+                                data-bs-target='#loginModal') Login
+        include registerModal.html
+        include loginModal.html
+        section#cards-container.d-flex.justify-content-center.align-items-center.flex-wrap.w-75.m-auto.vh-100
+            a.card.p-2.w-50.m-2.link-body-emphasis.text-decoration-none.cursor-pointer.d-flex.align-items-center kpt
+            a.card.p-2.w-50.m-2.link-body-emphasis.text-decoration-none.cursor-pointer.d-flex.align-items-center 2
+            a.card.p-2.w-50.m-2.link-body-emphasis.text-decoration-none.cursor-pointer.d-flex.align-items-center 3
+            a.card.p-2.w-50.m-2.link-body-emphasis.text-decoration-none.cursor-pointer.d-flex.align-items-center 4
+        section#menu.d-none.m-auto.w-75.justify-content-evenly.flex-column.align-items-center.opacity-0.vh-100.position-relative
+            button.back.position-absolute.top-0 back
+            .d-flex.w-100.justify-content-evenly.align-items-center
+                button.d-flex.w-25.justify-content-center.align-items-center.border text
+                button.d-flex.w-25.justify-content-center.align-items-center.border table
+                button.d-flex.w-25.justify-content-center.align-items-center.border dnevnik
+            #text-block.d-none.w-75.justify-content-center.position-relative.vh-90
+                p.w-100.m-1
+                    | &Pcy;&iecy;&rcy;&vcy;&ycy;&jcy; &tcy;&iecy;&kcy;&scy;&tcy;&ocy;&vcy;&ycy;&jcy; &bcy;&lcy;&ocy;&kcy;: &Ocy;&scy;&ncy;&ocy;&vcy;&ycy; &kcy;&ocy;&gcy;&ncy;&icy;&tcy;&icy;&vcy;&ncy;&ocy;&jcy; &pcy;&scy;&icy;&khcy;&ocy;&tcy;&iecy;&rcy;&acy;&pcy;&icy;&icy;.
+                    | &Kcy;&Pcy;&Tcy; - &ecy;&tcy;&ocy; &lcy;&ucy;&chcy;&shcy;&icy;&jcy; &mcy;&iecy;&tcy;&ocy;&dcy; &vcy;&scy;&iecy;&khcy; &vcy;&rcy;&iecy;&mcy;&iecy;&ncy; &icy; &ncy;&acy;&rcy;&ocy;&dcy;&ocy;&vcy; &bcy;&lcy;&acy; &bcy;&lcy;&acy; *&tcy;&iecy;&kcy;&scy;&tcy;*. &Vcy;&ocy;&tcy; &iecy;&scy;&tcy;&softcy; &mcy;&ocy;&dcy;&iecy;&lcy;&softcy;, &scy;&mcy;&ocy;&tcy;&rcy;&icy;&tcy;&iecy;:
+                button.d-none.w-25.justify-content-center.align-items-center.border.position-absolute.bottom-0.exit exit
+            #table-block.d-none.w-75.justify-content-center.position-relative.vh-90
+                p.w-100.m-1 table
+                button.d-none.w-25.justify-content-center.align-items-center.border.position-absolute.bottom-0.exit exit
+            #dnevnik-block.d-none.w-75.justify-content-center.position-relative.vh-90
+                #dnevnik.d-flex.justify-content-between.align-items-center.flex-column.mt-2.h-75.w-100.border.border-black
+                    table.table.w-100
+                        thead
+                            tr.d-flex.border.border-black.border-1.w-100
+                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 &Dcy;&acy;&tcy;&acy;
+                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 &Scy;&icy;&tcy;&ucy;&acy;&tscy;&icy;&yacy;
+                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 &Mcy;&ycy;&scy;&lcy;&softcy;
+                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 &Ecy;&mcy;&ocy;&tscy;&icy;&yacy;
+                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 &Scy;&icy;&lcy;&acy;
+                    button.d-none.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#dnevnikModal') add
+                button.d-none.w-25.justify-content-center.align-items-center.border.position-absolute.bottom-0.exit exit
+        #dnevnikModal.modal.fade.w-100.m-0(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+            .modal-dialog.modal-dialog-centered.w-75.mw-100
+                .modal-content
+                    .modal-header
+                        h5#exampleModalLabel.modal-title &Ocy;&pcy;&icy;&shcy;&icy;&tcy;&iecy; &scy;&ocy;&bcy;&ycy;&tcy;&icy;&iecy;
+                        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                    .modal-body
+                        form#newMind.d-flex.w-100.justify-content-evenly.align-items-center
+                            .d-flex.flex-column.justify-content-evenly.align-items-center
+                                input#date.mb-1(type='date' data-provide='datepicker')
+                                input#time(type='time' data-provide='datepicker')
+                            input(type='text'
+                                placeholder='Ситуация')
+                            input(type='text' placeholder='Мысль')
+                            input#emotionHelper(list='suggestions' name='suggestion' placeholder='Эмоция' autocomplete='off' pattern='^[a-zA-Z]+$')
+                            datalist#suggestions
+                            input#myRange.slider(type='range' min='0' max='100' value='50')
+                            p
+                                | &Zcy;&ncy;&acy;&chcy;&iecy;&ncy;&icy;&iecy;:
+                                span#demo
+                    .modal-footer
+                        button.btn.btn-secondary(type='button' data-bs-dismiss='modal') &Zcy;&acy;&kcy;&rcy;&ycy;&tcy;&softcy;
+                        button.btn.btn-primary(type='button' data-bs-dismiss='modal') &Scy;&ocy;&khcy;&rcy;&acy;&ncy;&icy;&tcy;&softcy; &icy;&zcy;&mcy;&iecy;&ncy;&iecy;&ncy;&icy;&yacy;
+        template#tableBlock
+
+        // main script
+        script(src='public/index.js')

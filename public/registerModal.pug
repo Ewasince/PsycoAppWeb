@@ -1,0 +1,19 @@
+#registerModal.modal.fade(tabindex='-1'
+    aria-labelledby='registerModalLabel'
+    aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h5#registerModalLabel.modal-title Register
+                button.btn-close(type='button'
+                    data-bs-dismiss='modal'
+                    aria-label='Close')
+            .modal-body
+                form#registerForm
+                    .mb-3
+                        label.form-label(for='regUsername') Username:
+                        input#regUsername.form-control(type='text' name='regUsername')
+                    .mb-3
+                        label.form-label(for='regPassword') Password:
+                        input#regPassword.form-control(type='password' name='regPassword')
+                    button.btn.btn-primary(type='submit') Register
