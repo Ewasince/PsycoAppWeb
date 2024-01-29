@@ -36,12 +36,13 @@
     <!--script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js')-->
     <script type="text/javascript" src="/node_modules/jquery/dist/jquery.js"></script>
   </head>
-  <body class="d-flex flex-column h-50">
+  <body class="d-flex flex-column h-50" ng-controller="MainCtrl">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#!">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a></li>
         <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
       </ul>
@@ -96,42 +97,6 @@
 </div>
     <ng-view></ng-view>
     <!--include app/startPage/startPage.html-->
-    <section class="d-none m-auto w-75 justify-content-evenly flex-column align-items-center opacity-0 vh-100 position-relative" id="menu">
-      <button class="back position-absolute top-0">back</button>
-      <div class="d-flex w-100 justify-content-evenly align-items-center">
-        <button class="secondaryBlock">text</button>
-        <button class="secondaryBlock">table</button>
-        <button class="secondaryBlock">dnevnik</button>
-      </div>
-      <div class="d-none w-75 justify-content-center position-relative vh-90" id="text-block">
-        <p class="w-100 m-1">
-          Первый текстовый блок: Основы когнитивной психотерапии.
-          КПТ - это лучший метод всех времен и народов бла бла *текст*. Вот есть модель, смотрите:
-        </p>
-        <button class="d-none w-25 justify-content-center align-items-center border position-absolute bottom-0 exit">exit</button>
-      </div>
-      <div class="d-none w-75 justify-content-center position-relative vh-90" id="table-block">
-        <p class="w-100 m-1">table</p>
-        <button class="d-none w-25 justify-content-center align-items-center border position-absolute bottom-0 exit">exit</button>
-      </div>
-      <div class="d-none w-75 justify-content-center position-relative vh-90" id="dnevnik-block">
-        <div class="d-flex justify-content-between align-items-center flex-column mt-2 h-75 w-100 border border-black" id="dnevnik">
-          <table class="table w-100">
-            <thead>
-              <tr class="d-flex border border-black border-1 w-100">
-                <th class="d-flex justify-content-center align-items-center border border-black border-1 w-100">Дата</th>
-                <th class="d-flex justify-content-center align-items-center border border-black border-1 w-100">Ситуация</th>
-                <th class="d-flex justify-content-center align-items-center border border-black border-1 w-100">Мысль</th>
-                <th class="d-flex justify-content-center align-items-center border border-black border-1 w-100">Эмоция</th>
-                <th class="d-flex justify-content-center align-items-center border border-black border-1 w-100">Сила</th>
-              </tr>
-            </thead>
-          </table>
-          <button class="d-none btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#dnevnikModal">add</button>
-        </div>
-        <button class="d-none w-25 justify-content-center align-items-center border position-absolute bottom-0 exit">exit</button>
-      </div>
-    </section>
     <div class="modal fade w-100 m-0" id="dnevnikModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered w-75 mw-100">
         <div class="modal-content">
@@ -163,6 +128,7 @@
     <template id="tableBlock"></template>
     <!-- main script-->
     <script type="module" src="/public/app/index.js"></script>
-    <script type="module" src="/public/app/startPage/startPageCtrl.js"></script>
+    <script type="module" src="/public/app/primaryBlocks/PrimaryBlocksCtrl.js"></script>
+    <script type="module" src="/public/app/secondaryBlocks/SecondaryBlocksCtrl.js"></script>
   </body>
 </html>

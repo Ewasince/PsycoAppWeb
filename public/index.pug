@@ -37,41 +37,15 @@ html(ng-app="PsychoApp")
         script(type="text/javascript" src="/node_modules/restangular/dist/restangular.js")
         script(type="text/javascript" src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js")
 
-
         // jquery
         //script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js')
         script(type="text/javascript" src='/node_modules/jquery/dist/jquery.js')
 
-    body.d-flex.flex-column.h-50
+    body.d-flex.flex-column.h-50(ng-controller="MainCtrl")
         include app/navBar/navBar.html
         ng-view
+
         //include app/startPage/startPage.html
-        section#menu.d-none.m-auto.w-75.justify-content-evenly.flex-column.align-items-center.opacity-0.vh-100.position-relative
-            button.back.position-absolute.top-0 back
-            .d-flex.w-100.justify-content-evenly.align-items-center
-                button.secondaryBlock text
-                button.secondaryBlock table
-                button.secondaryBlock dnevnik
-            #text-block.d-none.w-75.justify-content-center.position-relative.vh-90
-                p.w-100.m-1
-                    | Первый текстовый блок: Основы когнитивной психотерапии.
-                    | КПТ - это лучший метод всех времен и народов бла бла *текст*. Вот есть модель, смотрите:
-                button.d-none.w-25.justify-content-center.align-items-center.border.position-absolute.bottom-0.exit exit
-            #table-block.d-none.w-75.justify-content-center.position-relative.vh-90
-                p.w-100.m-1 table
-                button.d-none.w-25.justify-content-center.align-items-center.border.position-absolute.bottom-0.exit exit
-            #dnevnik-block.d-none.w-75.justify-content-center.position-relative.vh-90
-                #dnevnik.d-flex.justify-content-between.align-items-center.flex-column.mt-2.h-75.w-100.border.border-black
-                    table.table.w-100
-                        thead
-                            tr.d-flex.border.border-black.border-1.w-100
-                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 Дата
-                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 Ситуация
-                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 Мысль
-                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 Эмоция
-                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 Сила
-                    button.d-none.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#dnevnikModal') add
-                button.d-none.w-25.justify-content-center.align-items-center.border.position-absolute.bottom-0.exit exit
         #dnevnikModal.modal.fade.w-100.m-0(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
             .modal-dialog.modal-dialog-centered.w-75.mw-100
                 .modal-content
@@ -98,4 +72,5 @@ html(ng-app="PsychoApp")
 
         // main script
         script(type="module" src='/public/app/index.js')
-        script(type="module" src="/public/app/startPage/startPageCtrl.js")
+        script(type="module" src="/public/app/primaryBlocks/PrimaryBlocksCtrl.js")
+        script(type="module" src="/public/app/secondaryBlocks/SecondaryBlocksCtrl.js")

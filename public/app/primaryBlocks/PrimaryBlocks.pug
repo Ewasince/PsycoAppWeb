@@ -4,9 +4,10 @@
 //<p>Цена: {{phone.price}} $</p>
 //<p>Производитель: {{phone.company.name}}</p>
 //</li>
-section#cards-container.d-flex.justify-content-center.align-items-center.flex-wrap.w-75.m-auto.vh-100(ng-controller="StartCtrl")
-    button.mainBlock(ng-repeat="mainBlock in mainBlocks"
+section#cards-container.d-flex.justify-content-center.align-items-center.flex-wrap.w-75.m-auto.vh-100(ng-controller="PrimaryBlocksCtrl")
+    a.mainBlock(ng-repeat="mainBlock in mainBlocks"
         type="button"
+        href="#!second"
         ng-click="mainBlock.callback()")
         | {{ mainBlock.block_name }}
     //button.mainBlock kpt
