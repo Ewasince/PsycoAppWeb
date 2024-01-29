@@ -1,109 +1,132 @@
 doctype html
-head
-    meta(charset='UTF-8')
-    title Title
-    meta(name='viewport' content='width=device-width, initial-scale=1')
-    // css
-    //// bootstrap
-    //link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-    //    rel="stylesheet"
-    //    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-    //    crossorigin="anonymous")
-    //script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    //    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    //    crossorigin="anonymous")
-    //link(rel='stylesheet' href='./css/bootstrap.css') // old
-    //script(src='./js/bootstrap.bundle.js') // old
-    link(type="text/css" rel='stylesheet' href='/node_modules/bootstrap/dist/css/bootstrap.css')
-    script(type="text/javascript" src='/node_modules/bootstrap/dist/js/bootstrap.bundle.js')
-    //// my css
-    link(type="text/css" rel='stylesheet' href='/public/css/style.css')
+html(ng-app="PsychoApp")
+    head
+        meta(charset='UTF-8')
+        title Title
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        // css
+        //// bootstrap
+        //link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        //    rel="stylesheet"
+        //    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        //    crossorigin="anonymous")
+        //script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        //    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        //    crossorigin="anonymous")
+        //link(rel='stylesheet' href='./css/bootstrap.css') // old
+        //script(src='./js/bootstrap.bundle.js') // old
+        link(type="text/css" rel='stylesheet' href='/node_modules/bootstrap/dist/css/bootstrap.css')
+        script(type="text/javascript" src='/node_modules/bootstrap/dist/js/bootstrap.bundle.js')
+        //// my css
+        link(type="text/css" rel='stylesheet' href='/public/styles/main.css')
 
-    // angular
-    //script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js")
-    script(type="text/javascript" src="/node_modules/angular/angular.min.js")
+        // angular
 
-    // jquery
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js')
-    //script(type="text/javascript" src='node_modules/jquery/dist/jquery.min.js')
-body
-    .d-flex.flex-column.vh-100
-        nav.navbar.navbar-expand-lg.navbar-light.bg-light
-            .container-fluid
-                button.navbar-toggler(type='button'
-                    data-bs-toggle='collapse'
-                    data-bs-target='#navbarNav'
-                    aria-controls='navbarNav'
-                    aria-expanded='false'
-                    aria-label='Toggle navigation')
-                    span.navbar-toggler-icon
-                #navbarNav.collapse.navbar-collapse
-                    ul.navbar-nav
-                        li.nav-item
-                            a.nav-link(href='#'
-                                data-bs-toggle='modal'
-                                data-bs-target='#registerModal') Register
-                        li.nav-item
-                            a.nav-link(href='#'
-                                data-bs-toggle='modal'
-                                data-bs-target='#loginModal') Login
-        include registerModal.html
-        include loginModal.html
-        section#cards-container.d-flex.justify-content-center.align-items-center.flex-wrap.w-75.m-auto.vh-100
-            a.mainBlock kpt
-            a.mainBlock 2
-            a.mainBlock 3
-            a.mainBlock 4
-        section#menu.d-none.m-auto.w-75.justify-content-evenly.flex-column.align-items-center.opacity-0.vh-100.position-relative
-            button.back.position-absolute.top-0 back
-            .d-flex.w-100.justify-content-evenly.align-items-center
-                button.d-flex.w-25.justify-content-center.align-items-center.border text
-                button.d-flex.w-25.justify-content-center.align-items-center.border table
-                button.d-flex.w-25.justify-content-center.align-items-center.border dnevnik
-            #text-block.d-none.w-75.justify-content-center.position-relative.vh-90
-                p.w-100.m-1
-                    | Первый текстовый блок: Основы когнитивной психотерапии.
-                    | КПТ - это лучший метод всех времен и народов бла бла *текст*. Вот есть модель, смотрите:
-                button.d-none.w-25.justify-content-center.align-items-center.border.position-absolute.bottom-0.exit exit
-            #table-block.d-none.w-75.justify-content-center.position-relative.vh-90
-                p.w-100.m-1 table
-                button.d-none.w-25.justify-content-center.align-items-center.border.position-absolute.bottom-0.exit exit
-            #dnevnik-block.d-none.w-75.justify-content-center.position-relative.vh-90
-                #dnevnik.d-flex.justify-content-between.align-items-center.flex-column.mt-2.h-75.w-100.border.border-black
-                    table.table.w-100
-                        thead
-                            tr.d-flex.border.border-black.border-1.w-100
-                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 Дата
-                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 Ситуация
-                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 Мысль
-                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 Эмоция
-                                th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 Сила
-                    button.d-none.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#dnevnikModal') add
-                button.d-none.w-25.justify-content-center.align-items-center.border.position-absolute.bottom-0.exit exit
-        #dnevnikModal.modal.fade.w-100.m-0(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
-            .modal-dialog.modal-dialog-centered.w-75.mw-100
-                .modal-content
-                    .modal-header
-                        h5#exampleModalLabel.modal-title Опишите событие
-                        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
-                    .modal-body
-                        form#newMind.d-flex.w-100.justify-content-evenly.align-items-center
-                            .d-flex.flex-column.justify-content-evenly.align-items-center
-                                input#date.mb-1(type='date' data-provide='datepicker')
-                                input#time(type='time' data-provide='datepicker')
-                            input(type='text'
-                                placeholder='Ситуация')
-                            input(type='text' placeholder='Мысль')
-                            input#emotionHelper(list='suggestions' name='suggestion' placeholder='Эмоция' autocomplete='off' pattern='^[a-zA-Z]+$')
-                            datalist#suggestions
-                            input#myRange.slider(type='range' min='0' max='100' value='50')
-                            p
-                                | Значение:
-                                span#demo
-                    .modal-footer
-                        button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Закрыть
-                        button.btn.btn-primary(type='button' data-bs-dismiss='modal') Сохранить изменения
-        template#tableBlock
+        //// network
+        //script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js")
 
-        // main script
-        script(src='/public/index.js')
+        //// min
+        //script(type="text/javascript" src="/node_modules/angular/angular.min.js")
+        //script(type="text/javascript" src="/node_modules/angular-route/angular-route.min.js")
+        //script(type="text/javascript" src="/node_modules/restangular/dist/restangular.min.js")
+
+        //// dev
+        script(type="text/javascript" src="/node_modules/angular/angular.js")
+        script(type="text/javascript" src="/node_modules/angular-route/angular-route.js")
+        script(type="text/javascript" src="/node_modules/underscore/underscore.js")
+        script(type="text/javascript" src="/node_modules/restangular/dist/restangular.js")
+        script(type="text/javascript" src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js")
+
+        // jquery
+        //script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js')
+        script(type="text/javascript" src='/node_modules/jquery/dist/jquery.js')
+
+    body(ng-controller="mainController")
+        .d-flex.flex-column.vh-100
+            nav.navbar.navbar-expand-lg.navbar-light.bg-light
+                .container-fluid
+                    button.navbar-toggler(type='button'
+                        data-bs-toggle='collapse'
+                        data-bs-target='#navbarNav'
+                        aria-controls='navbarNav'
+                        aria-expanded='false'
+                        aria-label='Toggle navigation')
+                        span.navbar-toggler-icon
+                    #navbarNav.collapse.navbar-collapse
+                        ul.navbar-nav
+                            li.nav-item
+                                a.nav-link(href='#'
+                                    data-bs-toggle='modal'
+                                    data-bs-target='#registerModal') Register
+                            li.nav-item
+                                a.nav-link(href='#'
+                                    data-bs-toggle='modal'
+                                    data-bs-target='#loginModal') Login
+            include app/registerModal/registerModal.html
+            include app/loginModal/loginModal.html
+            //<li ng-repeat="phone in phones">
+            //<b>{{phone.name}}</b>
+            //<p>Цена: {{phone.price}} $</p>
+            //<p>Производитель: {{phone.company.name}}</p>
+            //</li>
+            section#cards-container.d-flex.justify-content-center.align-items-center.flex-wrap.w-75.m-auto.vh-100
+                button.mainBlock(ng-repeat="mainBlock in mainBlocks"
+                    type="button"
+                    ng-click="mainBlock.callback()")
+                    | {{ mainBlock.block_name }}
+                //button.mainBlock kpt
+                //button.mainBlock 2
+                //button.mainBlock 3
+                //button.mainBlock 4
+            section#menu.d-none.m-auto.w-75.justify-content-evenly.flex-column.align-items-center.opacity-0.vh-100.position-relative
+                button.back.position-absolute.top-0 back
+                .d-flex.w-100.justify-content-evenly.align-items-center
+                    button.secondaryBlock text
+                    button.secondaryBlock table
+                    button.secondaryBlock dnevnik
+                #text-block.d-none.w-75.justify-content-center.position-relative.vh-90
+                    p.w-100.m-1
+                        | Первый текстовый блок: Основы когнитивной психотерапии.
+                        | КПТ - это лучший метод всех времен и народов бла бла *текст*. Вот есть модель, смотрите:
+                    button.d-none.w-25.justify-content-center.align-items-center.border.position-absolute.bottom-0.exit exit
+                #table-block.d-none.w-75.justify-content-center.position-relative.vh-90
+                    p.w-100.m-1 table
+                    button.d-none.w-25.justify-content-center.align-items-center.border.position-absolute.bottom-0.exit exit
+                #dnevnik-block.d-none.w-75.justify-content-center.position-relative.vh-90
+                    #dnevnik.d-flex.justify-content-between.align-items-center.flex-column.mt-2.h-75.w-100.border.border-black
+                        table.table.w-100
+                            thead
+                                tr.d-flex.border.border-black.border-1.w-100
+                                    th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 Дата
+                                    th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 Ситуация
+                                    th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 Мысль
+                                    th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 Эмоция
+                                    th.d-flex.justify-content-center.align-items-center.border.border-black.border-1.w-100 Сила
+                        button.d-none.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#dnevnikModal') add
+                    button.d-none.w-25.justify-content-center.align-items-center.border.position-absolute.bottom-0.exit exit
+            #dnevnikModal.modal.fade.w-100.m-0(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+                .modal-dialog.modal-dialog-centered.w-75.mw-100
+                    .modal-content
+                        .modal-header
+                            h5#exampleModalLabel.modal-title Опишите событие
+                            button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                        .modal-body
+                            form#newMind.d-flex.w-100.justify-content-evenly.align-items-center
+                                .d-flex.flex-column.justify-content-evenly.align-items-center
+                                    input#date.mb-1(type='date' data-provide='datepicker')
+                                    input#time(type='time' data-provide='datepicker')
+                                input(type='text' placeholder='Ситуация')
+                                input(type='text' placeholder='Мысль')
+                                input#emotionHelper(list='suggestions' name='suggestion' placeholder='Эмоция' autocomplete='off' pattern='^[a-zA-Z]+$')
+                                datalist#suggestions
+                                input#myRange.slider(type='range' min='0' max='100' value='50')
+                                p
+                                    | Значение:
+                                    span#demo
+                        .modal-footer
+                            button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Закрыть
+                            button.btn.btn-primary(type='button' data-bs-dismiss='modal') Сохранить изменения
+            template#tableBlock
+
+            // main script
+            script(src='/public/app/index.js')

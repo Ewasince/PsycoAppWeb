@@ -1,43 +1,54 @@
 <!DOCTYPE html>
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- css-->
-  <!--// bootstrap-->
-  <!--link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"-->
-  <!--    rel="stylesheet"-->
-  <!--    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"-->
-  <!--    crossorigin="anonymous")-->
-  <!--script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"-->
-  <!--    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"-->
-  <!--    crossorigin="anonymous")-->
-  <!--link(rel='stylesheet' href='./css/bootstrap.css') // old-->
-  <!--script(src='./js/bootstrap.bundle.js') // old-->
-  <link type="text/css" rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
-  <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-  <!--// my css-->
-  <link type="text/css" rel="stylesheet" href="/public/css/style.css">
-  <!-- angular-->
-  <!--script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js")-->
-  <script type="text/javascript" src="/node_modules/angular/angular.min.js"></script>
-  <!-- jquery-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <!--script(type="text/javascript" src='node_modules/jquery/dist/jquery.min.js')-->
-</head>
-<body>
-  <div class="d-flex flex-column vh-100">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
-          </ul>
+<html ng-app="PsychoApp">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css-->
+    <!--// bootstrap-->
+    <!--link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"-->
+    <!--    rel="stylesheet"-->
+    <!--    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"-->
+    <!--    crossorigin="anonymous")-->
+    <!--script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"-->
+    <!--    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"-->
+    <!--    crossorigin="anonymous")-->
+    <!--link(rel='stylesheet' href='./css/bootstrap.css') // old-->
+    <!--script(src='./js/bootstrap.bundle.js') // old-->
+    <link type="text/css" rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <!--// my css-->
+    <link type="text/css" rel="stylesheet" href="/public/styles/main.css">
+    <!-- angular-->
+    <!--// network-->
+    <!--script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js")-->
+    <!--// min-->
+    <!--script(type="text/javascript" src="/node_modules/angular/angular.min.js")-->
+    <!--script(type="text/javascript" src="/node_modules/angular-route/angular-route.min.js")-->
+    <!--script(type="text/javascript" src="/node_modules/restangular/dist/restangular.min.js")-->
+    <!--// dev-->
+    <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="/node_modules/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="/node_modules/underscore/underscore.js"></script>
+    <script type="text/javascript" src="/node_modules/restangular/dist/restangular.js"></script>
+    <script type="text/javascript" src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+    <!-- jquery-->
+    <!--script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js')-->
+    <script type="text/javascript" src="/node_modules/jquery/dist/jquery.js"></script>
+  </head>
+  <body ng-controller="mainController">
+    <div class="d-flex flex-column vh-100">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a></li>
+              <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -84,73 +95,85 @@
     </div>
   </div>
 </div>
-    <section class="d-flex justify-content-center align-items-center flex-wrap w-75 m-auto vh-100" id="cards-container"><a class="mainBlock">kpt</a><a class="mainBlock">2</a><a class="mainBlock">3</a><a class="mainBlock">4</a></section>
-    <section class="d-none m-auto w-75 justify-content-evenly flex-column align-items-center opacity-0 vh-100 position-relative" id="menu">
-      <button class="back position-absolute top-0">back</button>
-      <div class="d-flex w-100 justify-content-evenly align-items-center">
-        <button class="d-flex w-25 justify-content-center align-items-center border">text</button>
-        <button class="d-flex w-25 justify-content-center align-items-center border">table</button>
-        <button class="d-flex w-25 justify-content-center align-items-center border">dnevnik</button>
-      </div>
-      <div class="d-none w-75 justify-content-center position-relative vh-90" id="text-block">
-        <p class="w-100 m-1">
-          Первый текстовый блок: Основы когнитивной психотерапии.
-          КПТ - это лучший метод всех времен и народов бла бла *текст*. Вот есть модель, смотрите:
-        </p>
-        <button class="d-none w-25 justify-content-center align-items-center border position-absolute bottom-0 exit">exit</button>
-      </div>
-      <div class="d-none w-75 justify-content-center position-relative vh-90" id="table-block">
-        <p class="w-100 m-1">table</p>
-        <button class="d-none w-25 justify-content-center align-items-center border position-absolute bottom-0 exit">exit</button>
-      </div>
-      <div class="d-none w-75 justify-content-center position-relative vh-90" id="dnevnik-block">
-        <div class="d-flex justify-content-between align-items-center flex-column mt-2 h-75 w-100 border border-black" id="dnevnik">
-          <table class="table w-100">
-            <thead>
-              <tr class="d-flex border border-black border-1 w-100">
-                <th class="d-flex justify-content-center align-items-center border border-black border-1 w-100">Дата</th>
-                <th class="d-flex justify-content-center align-items-center border border-black border-1 w-100">Ситуация</th>
-                <th class="d-flex justify-content-center align-items-center border border-black border-1 w-100">Мысль</th>
-                <th class="d-flex justify-content-center align-items-center border border-black border-1 w-100">Эмоция</th>
-                <th class="d-flex justify-content-center align-items-center border border-black border-1 w-100">Сила</th>
-              </tr>
-            </thead>
-          </table>
-          <button class="d-none btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#dnevnikModal">add</button>
+      <!--<li ng-repeat="phone in phones">-->
+      <!--<b>{{phone.name}}</b>-->
+      <!--<p>Цена: {{phone.price}} $</p>-->
+      <!--<p>Производитель: {{phone.company.name}}</p>-->
+      <!--</li>-->
+      <section class="d-flex justify-content-center align-items-center flex-wrap w-75 m-auto vh-100" id="cards-container">
+        <button class="mainBlock" ng-repeat="mainBlock in mainBlocks" type="button" ng-click="mainBlock.callback()">{{ mainBlock.block_name }}</button>
+        <!--button.mainBlock kpt-->
+        <!--button.mainBlock 2-->
+        <!--button.mainBlock 3-->
+        <!--button.mainBlock 4-->
+      </section>
+      <section class="d-none m-auto w-75 justify-content-evenly flex-column align-items-center opacity-0 vh-100 position-relative" id="menu">
+        <button class="back position-absolute top-0">back</button>
+        <div class="d-flex w-100 justify-content-evenly align-items-center">
+          <button class="secondaryBlock">text</button>
+          <button class="secondaryBlock">table</button>
+          <button class="secondaryBlock">dnevnik</button>
         </div>
-        <button class="d-none w-25 justify-content-center align-items-center border position-absolute bottom-0 exit">exit</button>
-      </div>
-    </section>
-    <div class="modal fade w-100 m-0" id="dnevnikModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered w-75 mw-100">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Опишите событие</h5>
-            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="d-none w-75 justify-content-center position-relative vh-90" id="text-block">
+          <p class="w-100 m-1">
+            Первый текстовый блок: Основы когнитивной психотерапии.
+            КПТ - это лучший метод всех времен и народов бла бла *текст*. Вот есть модель, смотрите:
+          </p>
+          <button class="d-none w-25 justify-content-center align-items-center border position-absolute bottom-0 exit">exit</button>
+        </div>
+        <div class="d-none w-75 justify-content-center position-relative vh-90" id="table-block">
+          <p class="w-100 m-1">table</p>
+          <button class="d-none w-25 justify-content-center align-items-center border position-absolute bottom-0 exit">exit</button>
+        </div>
+        <div class="d-none w-75 justify-content-center position-relative vh-90" id="dnevnik-block">
+          <div class="d-flex justify-content-between align-items-center flex-column mt-2 h-75 w-100 border border-black" id="dnevnik">
+            <table class="table w-100">
+              <thead>
+                <tr class="d-flex border border-black border-1 w-100">
+                  <th class="d-flex justify-content-center align-items-center border border-black border-1 w-100">Дата</th>
+                  <th class="d-flex justify-content-center align-items-center border border-black border-1 w-100">Ситуация</th>
+                  <th class="d-flex justify-content-center align-items-center border border-black border-1 w-100">Мысль</th>
+                  <th class="d-flex justify-content-center align-items-center border border-black border-1 w-100">Эмоция</th>
+                  <th class="d-flex justify-content-center align-items-center border border-black border-1 w-100">Сила</th>
+                </tr>
+              </thead>
+            </table>
+            <button class="d-none btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#dnevnikModal">add</button>
           </div>
-          <div class="modal-body">
-            <form class="d-flex w-100 justify-content-evenly align-items-center" id="newMind">
-              <div class="d-flex flex-column justify-content-evenly align-items-center">
-                <input class="mb-1" id="date" type="date" data-provide="datepicker">
-                <input id="time" type="time" data-provide="datepicker">
-              </div>
-              <input type="text" placeholder="Ситуация">
-              <input type="text" placeholder="Мысль">
-              <input id="emotionHelper" list="suggestions" name="suggestion" placeholder="Эмоция" autocomplete="off" pattern="^[a-zA-Z]+$">
-              <datalist id="suggestions"></datalist>
-              <input class="slider" id="myRange" type="range" min="0" max="100" value="50">
-              <p>Значение:<span id="demo"></span></p>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Закрыть</button>
-            <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Сохранить изменения</button>
+          <button class="d-none w-25 justify-content-center align-items-center border position-absolute bottom-0 exit">exit</button>
+        </div>
+      </section>
+      <div class="modal fade w-100 m-0" id="dnevnikModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered w-75 mw-100">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Опишите событие</h5>
+              <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="d-flex w-100 justify-content-evenly align-items-center" id="newMind">
+                <div class="d-flex flex-column justify-content-evenly align-items-center">
+                  <input class="mb-1" id="date" type="date" data-provide="datepicker">
+                  <input id="time" type="time" data-provide="datepicker">
+                </div>
+                <input type="text" placeholder="Ситуация">
+                <input type="text" placeholder="Мысль">
+                <input id="emotionHelper" list="suggestions" name="suggestion" placeholder="Эмоция" autocomplete="off" pattern="^[a-zA-Z]+$">
+                <datalist id="suggestions"></datalist>
+                <input class="slider" id="myRange" type="range" min="0" max="100" value="50">
+                <p>Значение:<span id="demo"></span></p>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Закрыть</button>
+              <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Сохранить изменения</button>
+            </div>
           </div>
         </div>
       </div>
+      <template id="tableBlock"></template>
+      <!-- main script-->
+      <script src="/public/app/index.js"></script>
     </div>
-    <template id="tableBlock"></template>
-    <!-- main script-->
-    <script src="/public/index.js"></script>
-  </div>
-</body>
+  </body>
+</html>
