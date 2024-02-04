@@ -5,16 +5,9 @@
     <input type="submit" value="back"/>
   </form>
   <div class="d-flex w-75 justify-content-evenly align-items-center">
-    <button class="secondaryBlock" ng-repeat="secondaryBlockName in currentSecondaryTab.sBlocks" type="button" href="#!second">{{ secondaryBlockName }}</button>
+    <button class="secondaryBlock" ng-repeat="secondaryBlock in currentSecondaryTab.sBlocks" type="button" href="#!second">{{ secondaryBlock.name }}</button>
     <!--button.secondaryBlock table-->
     <!--button.secondaryBlock dnevnik-->
-  </div>
-  <div class="d-none w-75 justify-content-center position-relative vh-90" id="text-block">
-    <p class="w-100 m-1">
-      Первый текстовый блок: Основы когнитивной психотерапии.
-      КПТ - это лучший метод всех времен и народов бла бла *текст*. Вот есть модель, смотрите:
-    </p>
-    <button class="d-none w-25 justify-content-center align-items-center border position-absolute bottom-0 exit">exit</button>
   </div>
   <div class="d-none w-75 justify-content-center position-relative vh-90" id="table-block">
     <p class="w-100 m-1">table</p>

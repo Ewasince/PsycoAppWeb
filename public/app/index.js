@@ -25,26 +25,50 @@ angular.module("PsychoApp", [
                             request: [{
                                 name: "kpt",
                                 sBlocks: [
-                                    "block1",
-                                    "block2",
-                                    "block3",
+                                    {
+                                        name: "block1"
+                                    },
+                                    {
+                                        name: "block2"
+                                    },
+                                    {
+                                        name: "block3"
+                                    },
                                 ]
                             }, {
                                 name: "pidor",
                                 sBlocks: [
-                                    "block4",
-                                    "block5",
-                                    "block6",
-                                    "block6.1",
+                                    {
+                                        name: "block4"
+                                    },
+                                    {
+                                        name: "block5"
+                                    },
+                                    {
+                                        name: "block6"
+                                    },
+                                    {
+                                        name: "block6.1"
+                                    },
                                 ]
                             }, {
                                 name: "huy",
                                 sBlocks: [
-                                    "block7",
-                                    "block8",
-                                    "block9",
-                                    "block9.1",
-                                    "block9.2",
+                                    {
+                                        name: "block7"
+                                    },
+                                    {
+                                        name: "block8"
+                                    },
+                                    {
+                                        name: "block9"
+                                    },
+                                    {
+                                        name: "block9.1"
+                                    },
+                                    {
+                                        name: "block9.2"
+                                    },
                                 ]
                             },
                             ]
