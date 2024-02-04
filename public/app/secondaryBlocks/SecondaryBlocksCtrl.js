@@ -6,17 +6,30 @@ SecondaryBlocksCtrl.$inject = ['$scope', '$uibModal', '$rootScope', '$log', '$ht
 function SecondaryBlocksCtrl($scope, $uibModal, $rootScope, $log, $http) {
     $log.log("SecondaryBlocksCtrl started!")
 
-    if (!($rootScope.currentSecondaryTab)) {
+    if (!($rootScope.currentPrimaryTabData)) {
         $log.log("BACK!!!")
         window.location = "#!/"
     }
-    $log.log("SecondaryBlocksCtrl started 2!, currentSecondaryTab=", $rootScope.currentSecondaryTab)
+    $log.log("SecondaryBlocksCtrl started 2!, currentPrimaryTabData=", $rootScope.currentPrimaryTabData)
 
-    $scope.secondaryBlocksData = $rootScope.currentSecondaryTab.sBlocks.map(function (el, idx) {
+    $scope.secondaryBlocksData = $rootScope.currentPrimaryTabData.sBlocks.map(function (el, idx) {
         $log.log("Set ref for el in secondary ", idx)
         var callbacksObj = {
             callback: () => {
                 $log.log("Link to secondary block!")
+                $rootScope.currentSecondaryTabData = el.data
+                switch (el.type) {
+                    case "text" :
+                        window.location = "#!/text"
+                        break
+                    case "table" :
+                        window.location = "#!/table"
+                        break
+                    case "diary" :
+                        window.location = "#!/diary"
+                        break
+                }
+
             }
         }
 

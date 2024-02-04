@@ -11,7 +11,7 @@ function PrimaryBlocksCtrl($scope, $uibModal, $rootScope, $log, $http) {
         $log.log("Set ref for el ", idx)
         var callbacsObj = {
             callback: () => {
-                $rootScope.currentSecondaryTab = el;
+                $rootScope.currentPrimaryTabData = el;
             }
         }
 

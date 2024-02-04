@@ -1,5 +1,6 @@
 import PrimaryBlocksCtrl from './primaryBlocks/PrimaryBlocksCtrl.js'
 import SecondaryBlocksCtrl from './secondaryBlocks/SecondaryBlocksCtrl.js'
+import TextBlockCtrl from './secondaryBlocks/text/textBlockCtrl.js'
 
 console.log("Index started!")
 angular.module("PsychoApp", [
@@ -10,8 +11,9 @@ angular.module("PsychoApp", [
 ])
         .controller('PrimaryBlocksCtrl', PrimaryBlocksCtrl)
         .controller('SecondaryBlocksCtrl', SecondaryBlocksCtrl)
+        .controller('TextBlockCtrl', TextBlockCtrl)
         .controller('MainCtrl', function ($rootScope, $http, $log) {
-            $log.log("config1 started!")
+            $log.log("MainCtrl started!")
 
 
             $rootScope.tabsData = {}
@@ -28,14 +30,23 @@ angular.module("PsychoApp", [
                                     {
                                         name: "block1",
                                         type: "text",
+                                        data: {
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                        },
                                     },
                                     {
                                         name: "block2",
                                         type: "text",
+                                        data: {
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                        },
                                     },
                                     {
                                         name: "block3",
                                         type: "text",
+                                        data: {
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                        },
                                     },
                                 ]
                             }, {
@@ -44,18 +55,30 @@ angular.module("PsychoApp", [
                                     {
                                         name: "block4",
                                         type: "text",
+                                        data: {
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                        },
                                     },
                                     {
                                         name: "block5",
                                         type: "text",
+                                        data: {
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                        },
                                     },
                                     {
                                         name: "block6",
                                         type: "text",
+                                        data: {
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                        },
                                     },
                                     {
                                         name: "block6.1",
                                         type: "text",
+                                        data: {
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                        },
                                     },
                                 ]
                             }, {
@@ -64,22 +87,37 @@ angular.module("PsychoApp", [
                                     {
                                         name: "block7",
                                         type: "text",
+                                        data: {
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                        },
                                     },
                                     {
                                         name: "block8",
                                         type: "text",
+                                        data: {
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                        },
                                     },
                                     {
                                         name: "block9",
                                         type: "text",
+                                        data: {
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                        },
                                     },
                                     {
                                         name: "block9.1",
                                         type: "text",
+                                        data: {
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                        },
                                     },
                                     {
                                         name: "block9.2",
                                         type: "text",
+                                        data: {
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                        },
                                     },
                                 ]
                             },
@@ -100,6 +138,11 @@ angular.module("PsychoApp", [
                     {
                         templateUrl: 'app/secondaryBlocks/SecondaryBlocks.html',
                         controller: 'SecondaryBlocksCtrl',
+                    });
+            $routeProvider.when('/text',
+                    {
+                        templateUrl: 'app/secondaryBlocks/text/text.html',
+                        controller: 'TextBlockCtrl',
                     });
             // $routeProvider.when('/answer',
             //     {

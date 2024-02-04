@@ -5,7 +5,7 @@ section#menu.d-flex.flex-column.m-auto.justify-content-evenly.align-items-center
     .d-flex.w-75.justify-content-evenly.align-items-center
         button.secondaryBlock(ng-repeat="secondaryBlock in secondaryBlocksData"
             type="button"
-            href="#!second")
+            ng-click="secondaryBlock.callback()")
             | {{ secondaryBlock.name }}
         //button.secondaryBlock table
         //button.secondaryBlock dnevnik
