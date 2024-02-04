@@ -42,14 +42,12 @@ angular.module("PsychoApp", [
                                         name: "block2",
                                         type: "table",
                                         data: {
-                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
                                         },
                                     },
                                     {
                                         name: "block3",
                                         type: "diary",
                                         data: {
-                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
                                         },
                                     },
                                 ]
@@ -60,28 +58,28 @@ angular.module("PsychoApp", [
                                         name: "block4",
                                         type: "text",
                                         data: {
-                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ 4",
                                         },
                                     },
                                     {
                                         name: "block5",
                                         type: "text",
                                         data: {
-                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ 5",
                                         },
                                     },
                                     {
                                         name: "block6",
                                         type: "text",
                                         data: {
-                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ 6",
                                         },
                                     },
                                     {
                                         name: "block6.1",
                                         type: "text",
                                         data: {
-                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ 6.1",
                                         },
                                     },
                                 ]
@@ -92,35 +90,35 @@ angular.module("PsychoApp", [
                                         name: "block7",
                                         type: "text",
                                         data: {
-                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ 7",
                                         },
                                     },
                                     {
                                         name: "block8",
                                         type: "text",
                                         data: {
-                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ 8",
                                         },
                                     },
                                     {
                                         name: "block9",
                                         type: "text",
                                         data: {
-                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ 9",
                                         },
                                     },
                                     {
                                         name: "block9.1",
                                         type: "text",
                                         data: {
-                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ 9.1",
                                         },
                                     },
                                     {
                                         name: "block9.2",
                                         type: "text",
                                         data: {
-                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
+                                            text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ 9.2",
                                         },
                                     },
                                 ]

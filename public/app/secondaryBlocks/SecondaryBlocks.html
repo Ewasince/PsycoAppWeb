@@ -1,33 +1,9 @@
 
-<!--section#menu.d-none.m-auto.w-75.justify-content-evenly.flex-column.align-items-center.opacity-0.vh-100.position-relative(ng-controller="SecondaryBlocksCtrl")-->
 <section class="d-flex flex-column m-auto justify-content-evenly align-items-center vh-100 position-relative" id="menu" ng-controller="SecondaryBlocksCtrl">
   <form action="#!/">
     <input type="submit" value="back"/>
   </form>
   <div class="d-flex w-75 justify-content-evenly align-items-center">
     <button class="secondaryBlock" ng-repeat="secondaryBlock in secondaryBlocksData" type="button" ng-click="secondaryBlock.callback()">{{ secondaryBlock.name }}</button>
-    <!--button.secondaryBlock table-->
-    <!--button.secondaryBlock dnevnik-->
-  </div>
-  <div class="d-none w-75 justify-content-center position-relative vh-90" id="table-block">
-    <p class="w-100 m-1">table</p>
-    <button class="d-none w-25 justify-content-center align-items-center border position-absolute bottom-0 exit">exit</button>
-  </div>
-  <div class="d-none w-75 justify-content-center position-relative vh-90" id="dnevnik-block">
-    <div class="d-flex justify-content-between align-items-center flex-column mt-2 h-75 w-100 border border-black" id="dnevnik">
-      <table class="table w-100">
-        <thead>
-          <tr class="d-flex border border-black border-1 w-100">
-            <th class="d-flex justify-content-center align-items-center border border-black border-1 w-100">Дата</th>
-            <th class="d-flex justify-content-center align-items-center border border-black border-1 w-100">Ситуация</th>
-            <th class="d-flex justify-content-center align-items-center border border-black border-1 w-100">Мысль</th>
-            <th class="d-flex justify-content-center align-items-center border border-black border-1 w-100">Эмоция</th>
-            <th class="d-flex justify-content-center align-items-center border border-black border-1 w-100">Сила</th>
-          </tr>
-        </thead>
-      </table>
-      <button class="d-none btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#dnevnikModal">add</button>
-    </div>
-    <button class="d-none w-25 justify-content-center align-items-center border position-absolute bottom-0 exit">exit</button>
   </div>
 </section>

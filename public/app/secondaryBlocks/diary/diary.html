@@ -1,7 +1,21 @@
-diary
+
 <div class="w-75 justify-content-center position-relative vh-90">
-  <p class="w-100 m-1">{{ text }}</p>
-  <form action="#!/second">
-    <input type="submit" value="exit"/>
-  </form>
+  <p class="w-100 m-1">diary</p>
+  <div class="d-flex justify-content-between align-items-center flex-column mt-2 h-75 w-100 border border-black">
+    <table class="table w-100">
+      <thead>
+        <tr class="d-flex border border-black border-1 w-100">
+          <th class="diaryMember">Дата</th>
+          <th class="diaryMember">Ситуация</th>
+          <th class="diaryMember">Мысль</th>
+          <th class="diaryMember">Эмоция</th>
+          <th class="diaryMember">Сила</th>
+        </tr>
+      </thead>
+    </table>
+    <button class="d-none btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#dnevnikModal">add</button>
+    <form action="#!/second">
+      <input type="submit" value="exit"/>
+    </form>
+  </div>
 </div>

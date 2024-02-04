@@ -7245,7 +7245,7 @@ textarea.form-control-lg {
   display: table-cell !important;
 }
 
-.d-flex, .mainBlock, .secondaryBlock {
+.d-flex, .mainBlock, .secondaryBlock, .diaryMember {
   display: flex !important;
 }
 
@@ -7385,7 +7385,7 @@ textarea.form-control-lg {
   transform: translateY(-50%) !important;
 }
 
-.border, .secondaryBlock {
+.border, .secondaryBlock, .diaryMember {
   border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
 }
 
@@ -7465,7 +7465,7 @@ textarea.form-control-lg {
   border-color: rgba(var(--bs-dark-rgb), var(--bs-border-opacity)) !important;
 }
 
-.border-black {
+.border-black, .diaryMember {
   --bs-border-opacity: 1;
   border-color: rgba(var(--bs-black-rgb), var(--bs-border-opacity)) !important;
 }
@@ -7507,7 +7507,7 @@ textarea.form-control-lg {
   border-color: var(--bs-dark-border-subtle) !important;
 }
 
-.border-1 {
+.border-1, .diaryMember {
   border-width: 1px !important;
 }
 
@@ -7559,7 +7559,7 @@ textarea.form-control-lg {
   width: 75% !important;
 }
 
-.w-100 {
+.w-100, .diaryMember {
   width: 100% !important;
 }
 
@@ -7667,7 +7667,7 @@ textarea.form-control-lg {
   justify-content: flex-end !important;
 }
 
-.justify-content-center, .secondaryBlock {
+.justify-content-center, .secondaryBlock, .diaryMember {
   justify-content: center !important;
 }
 
@@ -7691,7 +7691,7 @@ textarea.form-control-lg {
   align-items: flex-end !important;
 }
 
-.align-items-center, .mainBlock, .secondaryBlock {
+.align-items-center, .mainBlock, .secondaryBlock, .diaryMember {
   align-items: center !important;
 }
 
