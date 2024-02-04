@@ -41,8 +41,9 @@ html(ng-app="PsychoApp")
         //script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js')
         script(type="text/javascript" src='/node_modules/jquery/dist/jquery.js')
 
-    body.d-flex.flex-column.h-50(ng-controller="MainCtrl")
-        include app/navBar/navBar.html
+    //body.d-flex.flex-column.align-self-center(ng-controller="MainCtrl")
+    body.d-flex.flex-column.align-self-center(ng-controller="MainCtrl")
+        ng-include(src="'app/navBar/navBar.html'")
         ng-view
 
         //include app/startPage/startPage.html

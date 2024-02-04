@@ -1,11 +1,11 @@
 
 <!--section#menu.d-none.m-auto.w-75.justify-content-evenly.flex-column.align-items-center.opacity-0.vh-100.position-relative(ng-controller="SecondaryBlocksCtrl")-->
-<div class="m-auto w-75 justify-content-evenly flex-column align-items-center vh-100 position-relative" ng-controller="SecondaryBlocksCtrl">
-  <button class="back position-absolute top-0">back</button>
-  <div class="d-flex w-100 justify-content-evenly align-items-center">
-    <button class="secondaryBlock">text</button>
-    <button class="secondaryBlock">table</button>
-    <button class="secondaryBlock">dnevnik</button>
+<section class="d-flex flex-column m-auto justify-content-evenly align-items-center vh-100 position-relative" id="menu" ng-controller="SecondaryBlocksCtrl">
+  <button class="back position-absolute top-0 end-0 border">back</button>
+  <div class="d-flex w-75 justify-content-evenly align-items-center">
+    <button class="secondaryBlock" ng-repeat="secondaryBlockName in mainBlocks[currentSecondaryTab].sBlocks" type="button" href="#!second">{{ secondaryBlockName }}</button>
+    <!--button.secondaryBlock table-->
+    <!--button.secondaryBlock dnevnik-->
   </div>
   <div class="d-none w-75 justify-content-center position-relative vh-90" id="text-block">
     <p class="w-100 m-1">
@@ -35,4 +35,4 @@
     </div>
     <button class="d-none w-25 justify-content-center align-items-center border position-absolute bottom-0 exit">exit</button>
   </div>
-</div>
+</section>

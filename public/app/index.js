@@ -20,22 +20,46 @@ angular.module("PsychoApp", [
                     .then(function (data) {
                         setMainBlock(data.main_blocks);
                     }, function () {
-                        setMainBlock([
-                            "kpt",
-                            "pidor",
-                            "huy",
+                        setMainBlock([{
+                            name: "kpt",
+                            sBlocks: [
+                                "block1",
+                                "block2",
+                                "block3",
+                            ]
+                        }, {
+                            name: "pidor",
+                            sBlocks: [
+                                "block4",
+                                "block5",
+                                "block6",
+                                "block6.1",
+                            ]
+                        }, {
+                            name: "huy",
+                            sBlocks: [
+                                "block7",
+                                "block8",
+                                "block9",
+                                "block9.1",
+                                "block9.2",
+                            ]
+                        },
                         ])
                     });
 
 
             function setMainBlock(data) {
-                $rootScope.mainBlocks = data.map(function (el) {
-                    return {
-                        block_name: el,
+                $rootScope.mainBlocks = data.map(function (el, idx) {
+                    var addsd = {
                         callback: () => {
-                            $log.log("Set ref for el ", el);
+                            $rootScope.currentSecondaryTab = idx;
+                            $log.log("Set ref for el ", idx);
                         }
                     }
+
+                    return Object.assign(el, addsd)
+
                 });
             }
         })
