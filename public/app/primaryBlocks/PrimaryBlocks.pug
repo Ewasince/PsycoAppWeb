@@ -5,7 +5,7 @@
 //<p>Производитель: {{phone.company.name}}</p>
 //</li>
 section#cards-container.d-flex.justify-content-center.align-items-center.flex-wrap.w-75.m-auto.vh-100(ng-controller="PrimaryBlocksCtrl")
-    a.mainBlock(ng-repeat="mainBlock in mainBlocks"
+    a.mainBlock(ng-repeat="mainBlock in mainBlocksData"
         type="button"
         href="#!second"
         ng-click="mainBlock.callback()")

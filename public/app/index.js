@@ -14,85 +14,78 @@ angular.module("PsychoApp", [
             $log.log("config1 started!")
 
 
-            $rootScope.mainBlocks = {}
+            $rootScope.tabsData = {}
 
             $http.get("get_main_blocks")
                     .then(function (data) {
-                        setMainBlock(data.main_blocks);
+                        $rootScope.tabsData = data.main_blocks;
                     }, function () {
-                        $log.log("Set callbacks")
-                        setMainBlock({
+                        // $log.log("Set callbacks")
+                        $rootScope.tabsData = {
                             request: [{
                                 name: "kpt",
                                 sBlocks: [
                                     {
-                                        name: "block1"
+                                        name: "block1",
+                                        type: "text",
                                     },
                                     {
-                                        name: "block2"
+                                        name: "block2",
+                                        type: "text",
                                     },
                                     {
-                                        name: "block3"
+                                        name: "block3",
+                                        type: "text",
                                     },
                                 ]
                             }, {
                                 name: "pidor",
                                 sBlocks: [
                                     {
-                                        name: "block4"
+                                        name: "block4",
+                                        type: "text",
                                     },
                                     {
-                                        name: "block5"
+                                        name: "block5",
+                                        type: "text",
                                     },
                                     {
-                                        name: "block6"
+                                        name: "block6",
+                                        type: "text",
                                     },
                                     {
-                                        name: "block6.1"
+                                        name: "block6.1",
+                                        type: "text",
                                     },
                                 ]
                             }, {
                                 name: "huy",
                                 sBlocks: [
                                     {
-                                        name: "block7"
+                                        name: "block7",
+                                        type: "text",
                                     },
                                     {
-                                        name: "block8"
+                                        name: "block8",
+                                        type: "text",
                                     },
                                     {
-                                        name: "block9"
+                                        name: "block9",
+                                        type: "text",
                                     },
                                     {
-                                        name: "block9.1"
+                                        name: "block9.1",
+                                        type: "text",
                                     },
                                     {
-                                        name: "block9.2"
+                                        name: "block9.2",
+                                        type: "text",
                                     },
                                 ]
                             },
                             ]
-                        })
-                    });
-
-
-            function setMainBlock(data) {
-                $log.log("Set callbacks 2")
-                $log.log("Set callbacks, data.request=", data.request)
-
-
-                $rootScope.mainBlocks = data.request.map(function (el, idx) {
-                    $log.log("Set ref for el ", idx)
-                    var callbacsObj = {
-                        callback: () => {
-                            $rootScope.currentSecondaryTab = el;
                         }
-                    }
-
-                    return Object.assign(el, callbacsObj)
-
-                });
-            }
+                    });
         })
 
         .config(function ($routeProvider) {

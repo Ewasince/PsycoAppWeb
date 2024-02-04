@@ -3,7 +3,7 @@ section#menu.d-flex.flex-column.m-auto.justify-content-evenly.align-items-center
     form(action="#!/")
         input(type="submit" value="back")
     .d-flex.w-75.justify-content-evenly.align-items-center
-        button.secondaryBlock(ng-repeat="secondaryBlock in currentSecondaryTab.sBlocks"
+        button.secondaryBlock(ng-repeat="secondaryBlock in secondaryBlocksData"
             type="button"
             href="#!second")
             | {{ secondaryBlock.name }}

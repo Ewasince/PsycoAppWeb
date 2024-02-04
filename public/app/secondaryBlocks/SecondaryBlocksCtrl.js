@@ -10,9 +10,23 @@ function SecondaryBlocksCtrl($scope, $uibModal, $rootScope, $log, $http) {
         $log.log("BACK!!!")
         window.location = "#!/"
     }
+    $log.log("SecondaryBlocksCtrl started 2!, currentSecondaryTab=", $rootScope.currentSecondaryTab)
 
+    $scope.secondaryBlocksData = $rootScope.currentSecondaryTab.sBlocks.map(function (el, idx) {
+        $log.log("Set ref for el in secondary ", idx)
+        var callbacksObj = {
+            callback: () => {
+                $log.log("Link to secondary block!")
+            }
+        }
 
-    // $scope.mainBlocks = {}
+        return Object.assign(el, callbacksObj)
+
+    });
+
+    $log.log("SecondaryBlocksCtrl started 3!")
+
+    // $scope.tabsData = {}
     //
     // $http.get("get_main_blocks")
     //         .then(function (data) {
@@ -27,7 +41,7 @@ function SecondaryBlocksCtrl($scope, $uibModal, $rootScope, $log, $http) {
     //
     //
     // function setMainBlock(data) {
-    //     $scope.mainBlocks = data.map(function (el) {
+    //     $scope.tabsData = data.map(function (el) {
     //         $log.log("Test 1 ", el);
     //
     //         return {
