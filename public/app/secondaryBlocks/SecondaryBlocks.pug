@@ -1,8 +1,9 @@
 //section#menu.d-none.m-auto.w-75.justify-content-evenly.flex-column.align-items-center.opacity-0.vh-100.position-relative(ng-controller="SecondaryBlocksCtrl")
 section#menu.d-flex.flex-column.m-auto.justify-content-evenly.align-items-center.vh-100.position-relative(ng-controller="SecondaryBlocksCtrl")
-    button.back.position-absolute.top-0.end-0.border back
+    a(type="button"
+        href="#!/") back
     .d-flex.w-75.justify-content-evenly.align-items-center
-        button.secondaryBlock(ng-repeat="secondaryBlockName in mainBlocks[currentSecondaryTab].sBlocks"
+        button.secondaryBlock(ng-repeat="secondaryBlockName in currentSecondaryTab.sBlocks"
             type="button"
             href="#!second")
             | {{ secondaryBlockName }}

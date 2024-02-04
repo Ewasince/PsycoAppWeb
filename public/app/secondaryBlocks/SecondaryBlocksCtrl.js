@@ -6,6 +6,11 @@ SecondaryBlocksCtrl.$inject = ['$scope', '$uibModal', '$rootScope', '$log', '$ht
 function SecondaryBlocksCtrl($scope, $uibModal, $rootScope, $log, $http) {
     $log.log("SecondaryBlocksCtrl started!")
 
+    if (!($rootScope.currentSecondaryTab)) {
+        $log.log("BACK!!!")
+        window.location = "#!/"
+    }
+
 
     // $scope.mainBlocks = {}
     //

@@ -1,9 +1,8 @@
 
 <!--section#menu.d-none.m-auto.w-75.justify-content-evenly.flex-column.align-items-center.opacity-0.vh-100.position-relative(ng-controller="SecondaryBlocksCtrl")-->
-<section class="d-flex flex-column m-auto justify-content-evenly align-items-center vh-100 position-relative" id="menu" ng-controller="SecondaryBlocksCtrl">
-  <button class="back position-absolute top-0 end-0 border">back</button>
+<section class="d-flex flex-column m-auto justify-content-evenly align-items-center vh-100 position-relative" id="menu" ng-controller="SecondaryBlocksCtrl"><a type="button" href="#!/">back</a>
   <div class="d-flex w-75 justify-content-evenly align-items-center">
-    <button class="secondaryBlock" ng-repeat="secondaryBlockName in mainBlocks[currentSecondaryTab].sBlocks" type="button" href="#!second">{{ secondaryBlockName }}</button>
+    <button class="secondaryBlock" ng-repeat="secondaryBlockName in currentSecondaryTab.sBlocks" type="button" href="#!second">{{ secondaryBlockName }}</button>
     <!--button.secondaryBlock table-->
     <!--button.secondaryBlock dnevnik-->
   </div>

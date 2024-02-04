@@ -20,45 +20,52 @@ angular.module("PsychoApp", [
                     .then(function (data) {
                         setMainBlock(data.main_blocks);
                     }, function () {
-                        setMainBlock([{
-                            name: "kpt",
-                            sBlocks: [
-                                "block1",
-                                "block2",
-                                "block3",
+                        $log.log("Set callbacks")
+                        setMainBlock({
+                            request: [{
+                                name: "kpt",
+                                sBlocks: [
+                                    "block1",
+                                    "block2",
+                                    "block3",
+                                ]
+                            }, {
+                                name: "pidor",
+                                sBlocks: [
+                                    "block4",
+                                    "block5",
+                                    "block6",
+                                    "block6.1",
+                                ]
+                            }, {
+                                name: "huy",
+                                sBlocks: [
+                                    "block7",
+                                    "block8",
+                                    "block9",
+                                    "block9.1",
+                                    "block9.2",
+                                ]
+                            },
                             ]
-                        }, {
-                            name: "pidor",
-                            sBlocks: [
-                                "block4",
-                                "block5",
-                                "block6",
-                                "block6.1",
-                            ]
-                        }, {
-                            name: "huy",
-                            sBlocks: [
-                                "block7",
-                                "block8",
-                                "block9",
-                                "block9.1",
-                                "block9.2",
-                            ]
-                        },
-                        ])
+                        })
                     });
 
 
             function setMainBlock(data) {
-                $rootScope.mainBlocks = data.map(function (el, idx) {
-                    var addsd = {
+                $log.log("Set callbacks 2")
+                $log.log("Set callbacks, data.request=", data.request)
+
+
+                $rootScope.mainBlocks = data.request.map(function (el, idx) {
+                    $log.log("Set ref for el ", idx)
+                    var callbacsObj = {
                         callback: () => {
-                            $rootScope.currentSecondaryTab = idx;
-                            $log.log("Set ref for el ", idx);
+                            $rootScope.currentSecondaryTab = el;
                         }
                     }
 
-                    return Object.assign(el, addsd)
+                    return Object.assign(el, callbacsObj)
 
                 });
             }
