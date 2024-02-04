@@ -1,6 +1,8 @@
 import PrimaryBlocksCtrl from './primaryBlocks/PrimaryBlocksCtrl.js'
 import SecondaryBlocksCtrl from './secondaryBlocks/SecondaryBlocksCtrl.js'
 import TextBlockCtrl from './secondaryBlocks/text/textBlockCtrl.js'
+import DiaryBlockCtrl from './secondaryBlocks/diary/diaryBlockCtrl.js'
+import TableBlockCtrl from './secondaryBlocks/table/tableBlockCtrl.js'
 
 console.log("Index started!")
 angular.module("PsychoApp", [
@@ -12,6 +14,8 @@ angular.module("PsychoApp", [
         .controller('PrimaryBlocksCtrl', PrimaryBlocksCtrl)
         .controller('SecondaryBlocksCtrl', SecondaryBlocksCtrl)
         .controller('TextBlockCtrl', TextBlockCtrl)
+        .controller('DiaryBlockCtrl', DiaryBlockCtrl)
+        .controller('TableBlockCtrl', TableBlockCtrl)
         .controller('MainCtrl', function ($rootScope, $http, $log) {
             $log.log("MainCtrl started!")
 
@@ -36,14 +40,14 @@ angular.module("PsychoApp", [
                                     },
                                     {
                                         name: "block2",
-                                        type: "text",
+                                        type: "table",
                                         data: {
                                             text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
                                         },
                                     },
                                     {
                                         name: "block3",
-                                        type: "text",
+                                        type: "diary",
                                         data: {
                                             text: "Текст рыбы бляяя ЯХААА БААЛЯЯЯ",
                                         },
@@ -143,6 +147,16 @@ angular.module("PsychoApp", [
                     {
                         templateUrl: 'app/secondaryBlocks/text/text.html',
                         controller: 'TextBlockCtrl',
+                    });
+            $routeProvider.when('/table',
+                    {
+                        templateUrl: 'app/secondaryBlocks/table/table.html',
+                        controller: 'TableBlockCtrl',
+                    });
+            $routeProvider.when('/diary',
+                    {
+                        templateUrl: 'app/secondaryBlocks/diary/diary.html',
+                        controller: 'DiaryBlockCtrl',
                     });
             // $routeProvider.when('/answer',
             //     {
